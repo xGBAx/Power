@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
         workouts.forEach((workout, index) => {
             const row = document.createElement("tr");
             row.innerHTML = `
-                <td>${workout.exercise}</td>
-                <td>${workout.weight} kg</td>
-                <td>${workout.series}</td>
-                <td>${workout.reps}</td>
-                <td><button class="delete" data-index="${index}">Remover</button></td>
+                <td data-label="Exercício">${workout.exercise}</td>
+                <td data-label="Carga (kg)">${workout.weight} kg</td>
+                <td data-label="Séries">${workout.series}</td>
+                <td data-label="Repetições">${workout.reps}</td>
+                <td data-label="Ações"><button class="delete" data-index="${index}">Remover</button></td>
             `;
             dataTable.appendChild(row);
         });
